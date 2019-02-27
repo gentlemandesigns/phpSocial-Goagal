@@ -6,7 +6,7 @@ $name = 'Goagal';
 $author = 'GentlemanDesigns';
 
 // Theme URL
-$url = 'https://github.com/gentlemandesigns/goagal';
+$url = 'https://github.com/gentlemandesigns/phpSocial-Goagal';
 
 // Theme Version
 $version = '5.2';
