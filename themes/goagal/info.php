@@ -6,7 +6,7 @@ $name = 'Goagal';
 $author = 'GentlemanDesigns';
 
 // Theme URL
-$url = 'http://codecanyon.net/user/gentlemandesigns';
+$url = 'https://github.com/gentlemandesigns/goagal';
 
 // Theme Version
 $version = '5.2';
