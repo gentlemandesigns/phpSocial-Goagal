@@ -2,14 +2,19 @@
 <div class="row-body{$content_class}">
 	{$plugins}
 	{$cover}
-	<div class="nine columns" id="messages">
-		{$top}
-		<div id="load-content"></div>
-		{$rows}
-	<div id="profile-card"></div>
-	</div>
-	<div class="three columns">
-		{$sidebar}
+
+	<div>
+		<div class="grid-container">
+			<div class="grid-content" id="messages">
+				{$top}
+				<div id="load-content"></div>
+				{$rows}
+				<div id="profile-card"></div>
+			</div>
+			<div class="grid-sidebar">
+				{$sidebar}
+			</div>
+		</div>
 	</div>
 </div>
 {$ad2}

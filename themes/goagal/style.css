@@ -1037,6 +1037,14 @@ a.cover-button-active {
     padding: 10px;
 }
 
+.message-inner .message-avatar img {
+    display: block;
+}
+
+.message-inner .message-avatar a {
+    overflow: auto;
+}
+
 .message-divider {
     background: #dee0e3;
     float: left;
@@ -3214,6 +3222,7 @@ a.facebook-button:active {
     height: 24px;
     padding: 7px 5px 6px 5px;
     width: 24px;
+    filter: var(--plugin-p-i-c);
 }
 
 #notifications_btn,
@@ -4153,6 +4162,647 @@ dt {
     display: inline;
 }
 
+.grid-container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    float: left;
+}
+
+.grid-content {
+    flex: 7;
+    position: relative;
+}
+
+.grid-sidebar {
+    flex: 3;
+    position: relative;
+}
+
+.rtl body {
+    direction: rtl;
+}
+
+.rtl .logo-container {
+    float: right !important;
+    margin-left: 30px;
+    margin-right: 0;
+    width: 185px;
+    margin-top: 27.5px;
+}
+
+.rtl .search-input {
+    float: right;
+}
+
+.rtl .menu_btn,
+.rtl .menu-image {
+    float: left;
+}
+
+.rtl .menu_arrow {
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.rtl .menu-dd-container,
+.rtl .notification-container {
+    padding: 0 0 0 20px;
+}
+
+.rtl .menu-dd-content,
+.rtl .notification-content {
+    float: left;
+}
+
+.rtl .menu-dd-row {
+    text-align: left;
+}
+
+.rtl .delete_btn {
+    float: left;
+}
+
+.rtl .message-avatar {
+    float: right;
+}
+
+.rtl .message_btn,
+.rtl .friend-button {
+    float: left;
+}
+
+.rtl .friend-button {
+    margin: 0 5px 0 0;
+}
+
+.rtl .message-top {
+    padding: 3px 52px 3px 0;
+}
+
+.rtl .verified-small img {
+    margin: 0 3px -2px 0;
+}
+
+.rtl .topbar-button {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+
+.rtl .welcome-box,
+.rtl .welcome-user {
+    float: right;
+}
+
+.rtl .welcome-inputs {
+    float: left;
+}
+
+.rtl .welcome-message {
+    float: right;
+}
+
+.rtl .welcome-inputs form {
+    float: left;
+}
+
+.rtl .register-button,
+.rtl .login-button {
+    margin: 0 0 0 10px;
+}
+
+.rtl .remember-me input[type="checkbox"] {
+    float: right;
+}
+
+.rtl .welcome-captcha {
+    background-position: center left;
+}
+
+.rtl .sidebar-container {
+    padding: 0 0 10px 10px;
+}
+
+.rtl .message-container {
+    padding: 0 10px 10px 20px;
+}
+
+.rtl .timeago,
+.privacy-icons {
+    float: right;
+}
+
+.rtl .message-menu {
+    float: left;
+}
+
+.rtl .sidebar-link img {
+    margin: -4px 0 0 7px;
+}
+
+.rtl .sidebar-notifications-number {
+    left: 42px;
+    right: auto;
+}
+
+.rtl .sidebar-group a,
+.rtl .sidebar-page a {
+    margin: -1px 0 0 30px;
+    padding: 5px 10px 5px 25px;
+}
+
+.rtl .sidebar-settings-container {
+    right: auto;
+    left: 11px;
+}
+
+.rtl .sidebar-fa-image {
+    float: right;
+}
+
+.rtl .sidebar-fa-text {
+    padding: 0 35px 0 0;
+}
+
+.rtl .sidebar-fa-text .timeago {
+    float: none;
+}
+
+.rtl .sidebar-subscriptions {
+    float: right;
+}
+
+.rtl .message-shared {
+    border-left: 0;
+    border-right: 2px solid #BFBFBF;
+    padding: 0 10px 0 0;
+}
+
+.rtl .message-reply-avatar {
+    float: right;
+}
+
+.rtl .message-comment-box-form {
+    padding: 0 42px 3px 0;
+}
+
+.rtl .comment-reply-textarea {
+    padding: 5px 5px 5px 30px;
+}
+
+.rtl .comment-image-btn {
+    right: auto;
+    left: 6px;
+}
+
+.rtl .comment-btn {
+    float: left;
+}
+
+.rtl .comments-buttons {
+    padding: 0 42px 0 0;
+}
+
+.rtl .sci-box {
+    float: right;
+}
+
+.rtl .actions_btn {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 18px 0 0;
+    background-position-x: right;
+}
+
+.rtl .notification-text img {
+    margin: 1px 0 0 5px;
+}
+
+.rtl .message-reply-message {
+    padding: 0 42px 5px 16px;
+}
+
+.rtl .message-reply-footer {
+    padding: 0 42px 5px 0;
+}
+
+.rtl .like-comment {
+    float: right;
+}
+
+.rtl .download_btn {
+    float: left;
+    margin: 0 0 0 5px;
+}
+
+.rtl .image-thumbnail-container {
+    float: right;
+}
+
+.rtl #gallery-next {
+    background: url(images/icons/gallery_prev.png) no-repeat left bottom;
+    float: left;
+    background-position: left center;
+    left: 0;
+    right: auto;
+}
+
+.rtl #gallery-next:hover {
+    background: url(images/icons/gallery_prev_h.png) no-repeat left center;
+}
+
+.rtl #gallery-prev {
+    background: url(images/icons/gallery_next.png) no-repeat right bottom;
+    background-position: right center;
+    float: right;
+    right: 0;
+    left: auto;
+}
+
+.rtl #gallery-prev:hover {
+    background: url(images/icons/gallery_next_h.png) no-repeat right center;
+}
+
+.rtl .input_hidden {
+    left: auto;
+    right: -9999px;
+}
+
+.rtl .message-form-user img,
+.rtl .page-header img {
+    margin: 0 0 0 10px;
+    float: right;
+}
+
+.rtl .message-loader {
+    float: left;
+}
+
+.rtl #values label {
+    float: right;
+    margin: 0 0 0 3px;
+}
+
+.rtl .message-type-general {
+    border-left: 0;
+    border-right: 3px solid #7f7f7f;
+}
+
+.rtl .about-icon {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.rtl .cover-buttons {
+    margin-left: 0;
+    margin-right: 135px;
+    float: right;
+}
+
+.rtl .cover-description-content {
+    margin-right: 122px;
+    margin-left: 10px;
+}
+
+.rtl .cover-description-buttons {
+    float: left;
+}
+
+.rtl .cover-avatar {
+    margin: -77px 10px 0 0;
+}
+
+.rtl .cover-username img {
+    margin: 0 7px -3px 0;
+}
+
+.rtl .cover-username-container {
+    float: right;
+    padding: 0 10px 0 0;
+}
+
+.rtl a.cover-button {
+    margin-right: 0;
+    margin-left: 20px;
+    float: right;
+}
+
+.rtl .sidebar-arrow {
+    float: none;
+}
+
+.rtl .modal-btn,
+.rtl .modal-close,
+.rtl .modal-cancel {
+    margin: 10px 0 0 10px;
+    float: left;
+}
+
+.rtl .page-container {
+    padding: 0 10px 10px 20px;
+}
+
+.rtl .message-icon {
+    border-radius: 2px;
+    margin: 1px 0 0 5px;
+    float: right;
+}
+
+.rtl .notification-image {
+    float: right;
+}
+
+.rtl #notifications-content img.notifications {
+    margin: 0 0 0 5px;
+}
+
+.rtl .notification-text {
+    padding: 0 35px 0 0;
+}
+
+.rtl .sidebar-header-link a {
+    float: left;
+}
+
+.rtl .users-button {
+    float: left;
+    padding: 7px 10px 7px 0;
+}
+
+.rtl .search-sidebar {
+    padding: 5px 5px 5px 26px;
+}
+
+.rtl #search-sidebar-btn {
+    left: 24px;
+    right: auto;
+}
+
+.rtl .group-button,
+.rtl .page-button {
+    float: left;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.rtl .cover-buttons-group {
+    margin-right: 10px;
+}
+
+.rtl .cover-group-content {
+    margin-right: 0;
+}
+
+.rtl .page-input-content {
+    padding: 0 95px 0 0;
+}
+
+.rtl .page-input-title,
+.rtl .page-input-title-img {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.rtl .page-input-title-img {
+    margin: -75px 10px 0 0;
+}
+
+.rtl .notification-box>p {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+.rtl .notification-close {
+    right: auto;
+    left: 0;
+    background-position-x: right;
+}
+
+.rtl .admin-notifications-number {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.rtl .sidebar-link-sub a::after,
+.rtl .sidebar-link-sub-active a::after {
+    position: absolute;
+    right: auto;
+    left: 20px;
+}
+
+.rtl .message-no-avatar {
+    padding-right: 0;
+}
+
+.rtl .dash-half {
+    float: right;
+}
+
+.rtl .column,
+.rtl .columns {
+    float: right;
+}
+
+.rtl .admin-stats-column {
+    float: right;
+    padding: 0 10px 0 0;
+}
+
+.rtl .admin-stats-right-column {
+    text-align: left;
+    padding: 0 0 0 10px;
+}
+
+.rtl .edit-menu-item {
+    float: right;
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.rtl .page-input-content-stats {
+    padding-right: 0;
+}
+
+.rtl select {
+    background-position: center left 10px;
+    padding: 5px 5px 5px 26px !important;
+    background-size: 8px;
+}
+
+.rtl .likes-users {
+    float: right;
+}
+
+.rtl #values {
+    float: right;
+}
+
+.rtl .message-btn {
+    float: left;
+    padding: 6px 0 0 10px;
+}
+
+.rtl .button-normal a {
+    float: left;
+}
+
+.rtl .profile-card-info {
+    padding-right: 105px;
+    padding-left: 10px;
+    bottom: 10px;
+}
+
+.rtl .profile-card-avatar {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.rtl .profile-card-bio {
+    padding: 0 105px 0 10px;
+    color: #6B6B6B;
+    min-height: 40px;
+}
+
+.rtl .bullets-menu-container {
+    right: auto;
+    left: 0;
+    margin: 30px 0 0 20px;
+}
+
+.rtl .message-menu-container {
+    margin: 15px 0 0 30px;
+    right: auto;
+    left: 0;
+}
+
+.rtl .menu-profile-container {
+    right: auto;
+    left: 0;
+    margin: 40px 0 0 20px;
+}
+
+.rtl .bullets-button,
+.rtl .sub-loading {
+    margin-left: 0;
+    margin-right: 5px;
+    float: left;
+}
+
+.rtl .si-box {
+    float: right;
+}
+
+.rtl .sidebar-users img {
+    margin: 0 0 0 7px;
+}
+
+.rtl .sidebar-header input {
+    background-position-x: left;
+}
+
+.rtl .blocked-link {
+    float: left;
+}
+
+.rtl .c-w-icon {
+    float: right;
+    margin: 5px 5px 0 3px;
+}
+
+.rtl .chat-send {
+    float: left;
+    margin: 0 0 0 5px;
+}
+
+.rtl .c-w-status {
+    float: right;
+    margin: -5px 0 0 5px;
+}
+
+.rtl .bc-friends-username {
+    float: right;
+}
+
+.rtl .c-s-icon {
+    margin: 0 0 0 3px;
+}
+
+.rtl .minimize_btn,
+.rtl .settings_btn {
+    float: left;
+}
+
+.rtl .edit-btn {
+    float: left;
+}
+
+.rtl .message-menu-privacy {
+    margin: 37px 0 0 80px;
+}
+
+.rtl .bc-container {
+    right: auto;
+    left: 0;
+    margin: 0 0 0 10px;
+}
+
+.rtl .bc-friends-container {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.rtl .bc-friends-user {
+    margin-top: 35px;
+}
+
+.rtl .emoji-category {
+    float: right;
+}
+
+.rtl .emojis-container a {
+    float: right;
+}
+
+.rtl .plugin-button-normal {
+    float: right;
+}
+
+.rtl .sidebar-menu-container {
+    margin: -5px 0 0 20px !important;
+}
+
+.rtl .sidebar-avatar {
+    float: right;
+}
+
+.rtl .sidebar-avatar-desc {
+    margin-left: 0;
+    margin-right: 45px;
+}
+
+.rtl .notifications-number-container {
+    float: right;
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.rtl .notification-friendships {
+    float: right;
+    padding: 0;
+}
+
+.rtl .notification-buttons .notification-button {
+    float: left;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.rtl .notifications-number {
+    margin: -30px 9px 0 0
+}
+
 @media only screen and (max-device-width: 1002px),
 only screen and (device-width: 1024px) and (device-height: 1002px),
 only screen and (width: 1280px) and (orientation: landscape),
@@ -4487,6 +5137,51 @@ only screen and (max-width: 768px) {
         margin-right: 10px;
         margin-left: 10px;
         width: auto;
+    }
+
+    .edit-menu-item {
+        font-size: 13px;
+    }
+
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .grid-content,
+    .grid-sidebar {
+        flex: 1;
+    }
+
+    .rtl .message-container {
+        padding: 0 10px 10px 10px;
+    }
+
+    .rtl #profile-button {
+        left: 0;
+        right: auto;
+        margin: 3px 0 0 10px;
+    }
+
+    .rtl .bullets-button {
+        margin: 0 5px 0 32px;
+        float: left;
+    }
+
+    .rtl .cover-description-content {
+        margin-right: 102px;
+    }
+
+    .rtl .friend-btn {
+        margin-right: 0;
+        margin-left: 32px;
+    }
+
+    .rtl .cover-group-content {
+        margin-right: 0;
+    }
+
+    .rtl .message-menu-container {
+        margin-left: 20px;
     }
 }
 

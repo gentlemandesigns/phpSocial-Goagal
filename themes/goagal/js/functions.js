@@ -370,7 +370,11 @@ function cameraModal(type) {
 				cameraStream = stream;
 				
 				// Set the content to the camera stream
-				videoStream.src = window.URL.createObjectURL(stream);
+				try {
+					videoStream.srcObject = stream;
+				} catch (error) {
+					videoStream.src = window.URL.createObjectURL(stream);
+				}
 				
 				// Start playing the camera stream
 				videoStream.play();
@@ -761,10 +765,11 @@ function group(type, value, group, user, id) {
 				// Append the new comment to the div id
 				$('#messages').append(html);
 			} else if(type == 5) {
-				$('#more_users').remove();
 				if(user) {
+                    $('#more_messages').remove();
 					$('#messages').append(html);
 				} else {
+                    $('#more_users').remove();
 					$('#groups').append(html);
 				}
 			} else if(type == 6) {
@@ -1009,10 +1014,13 @@ function checkNewMessages() {
 	// Check the current page and if there's no extra filter applied
 	if( window.location.search.indexOf('a=feed') > -1
 	|| (window.location.search.indexOf('a=profile') > -1 && window.location.search.indexOf('&r=') == -1)
-	|| (window.location.search.indexOf('group&name=') > -1 && window.location.search.indexOf('&r=') == -1)
+	|| (window.location.search.indexOf('page&name=') > -1 && window.location.search.indexOf('&r=') == -1 && window.location.search.indexOf('&friends=') == -1)
+	|| (window.location.search.indexOf('group&name=') > -1 && window.location.search.indexOf('&r=') == -1 && window.location.search.indexOf('&search=') == -1 && window.location.search.indexOf('&friends=') == -1)
+	|| (window.location.pathname.indexOf('/feed') > -1)
 	// Check if the current page is a profile and it is not on a subpage (for example /about)
 	// But also make sure the user's username is not About, case in which, it should work if not on the subpage /about
 	|| (window.location.pathname.indexOf('/profile/') > -1 && ['about', 'friends', 'groups', 'likes', 'delete'].indexOf(window.location.pathname.split("/").pop()) == -1)
+	|| (window.location.pathname.indexOf('/page/') > -1 && ['likes', 'edit', 'delete'].indexOf(window.location.pathname.split("/").pop()) == -1)
 	|| (window.location.pathname.indexOf('/group/') > -1 && ['members', 'admins', 'requests', 'blocked', 'edit', 'delete'].indexOf(window.location.pathname.split("/").pop()) == -1)
 	) {
 		$.ajax({
@@ -1313,7 +1321,11 @@ function chatPluginContainer(id, close, extra) {
 	} else {
 		var position = $("#c-w-"+id).position();
 		var height = 112;
-		var left = 28;
+		if(lng_dir == "rtl") {
+			var left = 8;
+		} else {
+			var left = 28;
+		}
 	
 		// Store the position into an array
 		var pos = {
@@ -1575,25 +1587,34 @@ function profileCard(id, post, type, delay, page) {
 			// The position to be increased
 			var height = 45;
 			var left = 0;
+			var right = 20;
 		} else {
 			var classType = 'message';
 			// The position to be increased
 			var height = 58;
 			var left = 20;
+			var right = 20;
 		}
 		
 		// Start displaying the profile card with the preloader
 		$('#profile-card').show();
 		$('#profile-card').html('<div class="profile-card-padding"><div class="preloader preloader-center"></div></div>');
-	
+
 		// Get the position of the parent element
 		var position = $("#"+classType+post).position();
-		
+
 		// Store the position into an array
-		var pos = {
-			top: (position.top + height) + 'px',
-			left: (position.left + left) + 'px'
-		};
+		if(lng_dir == "rtl") {
+			var pos = {
+				top: (position.top + height) + 'px',
+				right: right + 'px'
+			};
+		} else {
+			var pos = {
+				top: (position.top + height) + 'px',
+				left: (position.left + left) + 'px'
+			};
+		}
 		
 		// Set the position of the profile card
 		$('#profile-card').css(pos);
